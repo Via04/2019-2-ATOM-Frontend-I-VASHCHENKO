@@ -13,5 +13,27 @@
  */
 
 export default function convertBytesToHuman(bytes) {
-  // your solution goes here
+  var prefix = ["B", "KB", "MB", "GB", "TB", "PB"];
+  if(bytes === parseInt(bytes, 10)) {
+    if((bytes >= 0) && (bytes % 1 === 0)) {
+      if(bytes < 1024) {
+        return bytes.toString() + ' ' + prefix[0]
+      }
+      var i = 1;
+      while (Math.ceil(bytes / 2**(i*10)) > 1023) {
+        i++;
+        if(i > 5) {
+          alert("Too large. I dont't believe you");
+          return -1;
+        }
+      }
+      return (bytes / 2**(i*10)).toFixed(2).toString() + " " + prefix[i];
+    }
+    else {
+      return -1;
+    }
+  }
+  else {
+    return -1;
+  }
 }
