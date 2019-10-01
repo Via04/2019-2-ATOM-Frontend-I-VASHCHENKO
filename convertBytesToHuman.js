@@ -14,6 +14,7 @@
 
 export default function convertBytesToHuman(bytes) {
   var prefix = ["B", "KB", "MB", "GB", "TB", "PB"];
+  var out;
   if(bytes === parseInt(bytes, 10)) {
     if((bytes >= 0) && (bytes % 1 === 0)) {
       if(bytes < 1024) {
@@ -27,7 +28,15 @@ export default function convertBytesToHuman(bytes) {
           return -1;
         }
       }
-      return (bytes / 2**(i*10)).toFixed(2).toString() + " " + prefix[i];
+      out = (bytes / 2**(i*10));
+      if(out % 1 <= 0.01) {
+        out = Math.trunc(out);
+        return out.toString() + " " + prefix[i];
+      }
+      else {
+        out = out.toFixed(2);
+        return out.toString() + " " + prefix[i];
+      }
     }
     else {
       return -1;
