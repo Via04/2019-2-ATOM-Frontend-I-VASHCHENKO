@@ -24,7 +24,18 @@ nonUniqueElements([5, 5, 5, 5, 5]) == [5, 5, 5, 5, 5]
 nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
  */
 
-export default function nonUniqueElements(data) {
-  // your solution goes here
-  return data
+/*export default*/ function nonUniqueElements(data) {
+  for(let i = 0; i < data.length; i++) {
+    let tmp = data[i];
+    data = data.slice(0,i-1).concat(data.slice(i+1));
+    if(!data.includes(tmp)) {
+      i--;
+      continue;
+    }
+    else {
+      data.unshift(tmp);
+    }
+  }
+  return data;
 }
+console.log(nonUniqueElements([1, 2, 3, 1, 3]));
