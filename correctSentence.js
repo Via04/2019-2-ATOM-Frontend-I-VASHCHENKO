@@ -17,7 +17,7 @@ correctSentence("Greetings, friends") == "Greetings, friends."
 correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
-/*export default*/ function correctSentence(text) {
+export default function correctSentence(text) {
   if(!(isNaN(text.charAt(0) * 1))) {
     console.log("Your sentence starts with a number.");
     return -1;
