@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "stable"
+
+before_install:
+  - cd web-components
+
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  github_token: $repo_token
+  local_dir: build
+  on:
+    branch:
+      - master
+      - devel
