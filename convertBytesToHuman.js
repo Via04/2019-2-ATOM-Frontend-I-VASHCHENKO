@@ -24,7 +24,7 @@ export default function convertBytesToHuman(bytes) {
       while (Math.ceil(bytes / 2**(i*10)) > 1023) {
         i++;
         if(i > 5) {
-          alert("Too large. I dont't believe you");
+          console.log("Too large. I dont't believe you");
           return -1;
         }
       }
