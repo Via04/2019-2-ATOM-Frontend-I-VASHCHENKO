@@ -1,6 +1,6 @@
 {
   "name": "atom-mail-2019-a-opalev",
-  "homepage": "https://track-mail-ru.github.io/atom-mail/",
+  "homepage": "https://via04.github.io/2019-2-ATOM-Frontend-I-VASHCHENKO/",
   "description": "Mail.Ru Group Frontend Atom course, 2019",
   "version": "0.1.0",
   "author": "A Opalev",
@@ -81,7 +81,8 @@
     "lint": "npm run lint:js && npm run lint:dup && npm run lint:css",
     "lint-fix": "eslint --fix",
     "clean": "rm -rf dist",
-    "test": "npm run test:engine && npm run test:unit && npm run lint",
+    "test": "CI=true react-scripts test --env=jsdom",
+    "test:coverage": "npm test -- --coverage",
     "test:engine": "check-engine",
     "test:sec": "npm audit || true",
     "test:unit": "cross-env NODE_ENV=test jest",
