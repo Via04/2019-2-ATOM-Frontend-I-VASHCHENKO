@@ -18,6 +18,18 @@ correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
 export default function correctSentence(text) {
-  // your solution goes here
+  if(!(isNaN(text.charAt(0) * 1))) {
+    console.log("Your sentence starts with a number.");
+    return -1;
+  }
+  if(text.charAt(0) == text.charAt(0).toLowerCase()) {
+    let temp = text.slice(1);
+    text = text.charAt(0).toUpperCase() + temp;
+  }
+  if(text.charAt(text.length - 1) != ".") {
+    text = text + ".";
+  }
   return text;
 }
+
+console.log(correctSentence("Greetings, friends."));
