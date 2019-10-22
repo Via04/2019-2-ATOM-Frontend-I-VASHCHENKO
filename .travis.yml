@@ -4,7 +4,6 @@ node_js:
 
 before_install:
   - cd web-components
-  - npm config set package-lock false
 
 script:
   - npm run test
