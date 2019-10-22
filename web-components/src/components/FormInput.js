@@ -3,23 +3,29 @@ template.innerHTML = `
     <style>
         input {
             border: 0;
+            border-top: 5px solid gray;
             outline: none;
             width: calc(100% - 2px);
+            height: 40px;
+            font-size: 50px;
+            padding: 25px 50px;
+            margin: 0;
+            position: fixed;
+            bottom: 0;
         }
 
         :host {
             display: inline-block;
-            border: 1px solid rgba(25, 25, 25, 0.32);
         }
     </style>
     <input type="text">
 `;
 
 class FormInput extends HTMLElement {
-    constructor () {
+    constructor() {
         super();
-        this._shadowRoot = this.attachShadow({ mode: 'open' });
-        this._shadowRoot.appendChild(template.content.cloneNode(true));
+        this.shadowRoot = this.attachShadow({ mode: 'open' });
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.$input = this.shadowRoot.querySelector('input');
     }
@@ -34,6 +40,10 @@ class FormInput extends HTMLElement {
 
     get value() {
         return this.$input.value;
+    }
+
+    set value(newValue) {
+        this.$input.value = newValue;
     }
 }
 
