@@ -1,5 +1,6 @@
 {
   "private": true,
+  "homepage": "https://via04.github.io/2019-2-ATOM-Frontend-I-VASHCHENKO",
   "scripts": {
     "test": "eslint ./src/",
     "start": "webpack-dev-server --mode=development --hot",
