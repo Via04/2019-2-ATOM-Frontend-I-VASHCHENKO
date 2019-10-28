@@ -91,9 +91,11 @@ class DialogHeader extends HTMLElement{
         if (event.key === 'Backspace') {
             input = input.slice(0, -1);
             this.find(input);
-        } else {
+        }
+        else {
             this.find(input + event.key);
         }
     }
-
 }
+
+customElements.define('dialog-header',DialogHeader);
