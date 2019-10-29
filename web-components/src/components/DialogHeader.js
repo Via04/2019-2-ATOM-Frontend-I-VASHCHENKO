@@ -36,7 +36,7 @@ template.innerHTML = `
             display: flex;
             justify-content: flex-end;
             margin-right: 5vh;
-            background: rgb(212, 1, 254);
+            background: #ff05d8;
             border: none;
         }
         
