@@ -30,6 +30,7 @@ module.exports = {
 		// a11y
 		'a11y/content-property-no-static-value': true,
 		'csstools/use-nesting': 'ignore',
+		indentation: 'tab',
 		'scss/media-feature-value-dollar-variable': 'never',
 		'scale-unlimited/declaration-strict-value': [
 			['/color/', 'fill', 'stroke'],
