@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../styles/profile.module.css';
 
+// profile added
+
 export default function UserProfile() {
 	const [data, setData] = useState({});
 
