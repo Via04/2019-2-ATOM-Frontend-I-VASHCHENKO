@@ -5,7 +5,6 @@ import styles from '../../styles/listchats.module.css';
 
 const ListChats = () => {
 	const myRef = useRef(null);
-	const textRef = useRef(null);
 	const [chats, setChats] = useState([]);
 	const [iuser, setiUser] = useState('');
 	const [visible, setVisible] = useState(false);
