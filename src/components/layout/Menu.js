@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import SignedIn from './SignedIn';
 import SignedOut from './SignedOut';
 import styles from '../../styles/menu.module.css';
 
 const Menu = (props) => {
-	const [login, setLogin] = useState('Some UID');
-	setLogin('Some UID');
+	const login = 'Some UID';
+	// setLogin('Some UID');
 	const loginStatus = login ? <SignedIn /> : <SignedOut />;
 	const { visible } = props;
 	if (visible) {

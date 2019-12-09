@@ -139,7 +139,7 @@ const ListChats = () => {
 
 	return (
 		<div>
-			<Navbar />
+			<Navbar name="REACT-MESSENGER" isChat={false} />
 			<UserList names={chats} />
 			<AddUserButton />
 			<AddUserInput />

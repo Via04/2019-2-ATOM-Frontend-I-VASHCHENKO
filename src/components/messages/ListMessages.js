@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Navbar from '../layout/Navbar';
 import styles from '../../styles/listmessages.module.css';
 
 export default function Message({ name }) {
@@ -62,24 +62,7 @@ export default function Message({ name }) {
 
 	return (
 		<div>
-			<div className={styles.chat_header}>
-				<div
-					className={styles.backimg}
-					role="button"
-					onClick={() => {}}
-					onKeyPress={() => {}}
-					tabIndex="0"
-				>
-					<Link to="/">
-						<img
-							className={styles.imgclick}
-							src="http://s1.iconbird.com/ico/2014/1/598/w128h1281390846445leftround128.png"
-							alt="back"
-						/>
-					</Link>
-				</div>
-				<p className={styles.header_chat}>{name}</p>
-			</div>
+			<Navbar name={name} />
 			<MessageList messages={messages} />
 			<input
 				type="text"
