@@ -10,6 +10,9 @@ export default function Message({ name }) {
 	const [messages, setMessages] = useState([]);
 	const [newMessage, setNewMessage] = useState('');
 	const [attachMenu, setAttachMenu] = useState(false);
+	const [recordStatus, setRecordStatus] = useState(null);
+	const [recorder, setRecorder] = useState(null);
+	const [chunks, setChunks] = useState([]);
 
 	useEffect(() => {
 		const msg = localStorage.getItem(name) || '[]';
@@ -25,6 +28,7 @@ export default function Message({ name }) {
 			const data = param.messages.map((message) => (
 				<div className={styles.chat_box} key={message.id}>
 					<span className={styles.msg}>{message.time}</span>
+					{/* eslint-disable-next-line no-nested-ternary */}
 					{message.isLocation ? (
 						<p className={styles.chat_text}>
 							<a
@@ -33,7 +37,8 @@ export default function Message({ name }) {
 								My location
 							</a>
 						</p>
-					) : message.isPhoto ? (
+					) : // eslint-disable-next-line no-nested-ternary
+					message.isPhoto ? (
 						<div>
 							{message.content.map((imgU, index) => (
 								<img
@@ -46,6 +51,11 @@ export default function Message({ name }) {
 									}}
 								/>
 							))}
+						</div>
+					) : message.isAudio ? (
+						<div className={styles.player}>
+							{/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+							<audio controls src={message.content} />
 						</div>
 					) : (
 						<p className={styles.chat_text}>{message.content}</p>
@@ -81,6 +91,7 @@ export default function Message({ name }) {
 						author: 'you',
 						isLocation: false,
 						isPhoto: false,
+						isAudio: false,
 					},
 				]);
 				setNewMessage('');
@@ -108,6 +119,7 @@ export default function Message({ name }) {
 					author: who,
 					isLocation: true,
 					isPhoto: false,
+					isAudio: false,
 				},
 			]);
 		}
@@ -173,10 +185,85 @@ export default function Message({ name }) {
 				k: keys,
 				isLocation: false,
 				isPhoto: true,
+				isAudio: false,
 			},
 		]);
 		fileUploadHandler(e.target.files);
 	};
+
+	// Audio
+
+	async function getMedia() {
+		let stream = null;
+		try {
+			const constraints = { audio: true, video: false };
+			stream = await navigator.mediaDevices.getUserMedia(constraints);
+			const mediaRecorder = new MediaRecorder(stream);
+			return mediaRecorder;
+		} catch (e) {
+			console.log("Can't get audio device");
+			return null;
+		}
+	}
+
+	const startRecord = (record) => {
+		const lChunks = [];
+		const recordAudio = record;
+		recordAudio.start(10);
+		console.log('recorder started');
+		recordAudio.ondataavailable = (event) => {
+			lChunks.push(event.data);
+		};
+		setRecordStatus(true);
+		setRecorder(recordAudio);
+		setChunks(lChunks);
+	};
+
+	function stopRecord() {
+		recorder.stop();
+		setRecordStatus(false);
+		console.log('Recorder stopped');
+		console.log(chunks);
+		const date = new Date();
+		const blob = new Blob(chunks, { type: 'audio/ogg' });
+		const data = new FormData();
+		data.append('audio', blob);
+		fetch('https://tt-front.now.sh/upload', {
+			method: 'POST',
+			body: data,
+		}).then((response) => {
+			console.log(response.status);
+			console.log(response);
+		});
+		const audioURL = window.URL.createObjectURL(blob);
+		setMessages([
+			...messages,
+			{
+				id: messages.length,
+				time: date.toTimeString().slice(0, 5),
+				content: audioURL,
+				author: 'you',
+				isLocation: false,
+				isPhoto: false,
+				isAudio: true,
+			},
+		]);
+	}
+
+	function handleMedia(event) {
+		event.preventDefault();
+		if (recordStatus === null) {
+			// console.log('initializing recorder');
+			getMedia().then((mediaRecorder) => {
+				startRecord(mediaRecorder);
+			});
+		} else if (recordStatus) {
+			stopRecord();
+			console.log(chunks);
+		} else {
+			startRecord(recorder);
+		}
+	}
 
 	const menu = attachMenu ? (
 		<div className={styles.menu}>
@@ -187,11 +274,14 @@ export default function Message({ name }) {
 					</button>
 				</li>
 				<li>
-					<button type="button" onClick={() => fileRef.current.click()}>
+					<button
+						type="button"
+						className={styles.menu_button}
+						onClick={() => fileRef.current.click()}
+					>
 						image
 					</button>
 				</li>
-				<li>audio</li>
 			</ul>
 		</div>
 	) : null;
@@ -216,10 +306,23 @@ export default function Message({ name }) {
 					</button>
 					{menu}
 				</div>
+				<div className={styles.audio}>
+					<button
+						type="button"
+						className={styles.attach}
+						onClick={(event) => handleMedia(event)}
+					>
+						<img
+							src="https://img.icons8.com/wired/64/000000/microphone.png"
+							alt="rec"
+						/>
+					</button>
+				</div>
 			</div>
 			<input
 				multiple
 				type="file"
+				accept="image/*"
 				ref={fileRef}
 				className={styles.input_file}
 				onChange={handleFiles}
