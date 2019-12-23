@@ -132,9 +132,9 @@ bower_components/
 dist/
 
 #### eslint ####
-# These rules are required to lint .eslintrc.js and friends.
+# These rules are required to lint .eslintrc.json and friends.
 # It is not related to git in any manner.
-!.eslintrc.js
+!web-components/.eslintrc.json
 !stylelint.config.js
 !.remarkrc.js
 
