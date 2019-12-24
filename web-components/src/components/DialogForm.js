@@ -108,10 +108,6 @@ class MainScreen extends HTMLElement {
     }
   }
 
-  // search() {
-  //   PaymentAddress;
-  // }
-
   onSubmit(event) {
     event.preventDefault()
     const $input = this.shadowRoot.querySelector('dialog-input')
