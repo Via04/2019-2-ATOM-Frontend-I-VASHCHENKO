@@ -1,4 +1,4 @@
-const template = document.createElement('template')
+const template = document.createElement('template');
 template.innerHTML = `
     <style>
         .header {
@@ -53,47 +53,47 @@ template.innerHTML = `
         <div class='messenger'>Messenger</div>
     </div>
     <form></form>
-`
+`;
 
 class DialogHeader extends HTMLElement {
   constructor() {
-    super()
-    this.input_status = false
-    this.shadowRoot = this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    super();
+    this.input_status = false;
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.$header = this.shadowRoot.querySelector('.header')
-    this.$search = this.shadowRoot.querySelector('.search')
-    this.$form = this.shadowRoot.querySelector('form')
+    this.$header = this.shadowRoot.querySelector('.header');
+    this.$search = this.shadowRoot.querySelector('.search');
+    this.$form = this.shadowRoot.querySelector('form');
 
-    this.$search.addEventListener('click', this.onclick.bind(this))
+    this.$search.addEventListener('click', this.onclick.bind(this));
   }
 
   connectedCallback() {
-    this.$form.addEventListener('keydown', this.onKeyPress.bind(this))
+    this.$form.addEventListener('keydown', this.onKeyPress.bind(this));
   }
 
   onclick() {
     if (this.input_status) {
-      const $input = this.shadowRoot.querySelector('search-input')
-      $input.remove()
-      this.input_status = false
+      const $input = this.shadowRoot.querySelector('search-input');
+      $input.remove();
+      this.input_status = false;
     } else {
-      const $input = document.createElement('search-input')
-      this.$form.appendChild($input)
-      this.input_status = true
+      const $input = document.createElement('search-input');
+      this.$form.appendChild($input);
+      this.input_status = true;
     }
   }
 
   onKeyPress(event) {
-    let input = this.shadowRoot.querySelector('search-input').value
+    let input = this.shadowRoot.querySelector('search-input').value;
     if (event.key === 'Backspace') {
-      input = input.slice(0, -1)
-      this.find(input)
+      input = input.slice(0, -1);
+      this.find(input);
     } else {
-      this.find(input + event.key)
+      this.find(input + event.key);
     }
   }
 }
 
-customElements.define('dialog-header', DialogHeader)
+customElements.define('dialog-header', DialogHeader);

@@ -1,4 +1,4 @@
-const template = document.createElement('template')
+const template = document.createElement('template');
 template.innerHTML = `
   <style>
     .wrapper {
@@ -75,35 +75,35 @@ template.innerHTML = `
       <span class='date'></span>
       <span class='check'</span>
   </div>
-`
+`;
 
 class Dialog extends HTMLElement {
   constructor() {
-    super()
-    this.shadowRoot = this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    super();
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.$message = this.shadowRoot.querySelector('.message')
-    this.$date = this.shadowRoot.querySelector('.date')
-    this.$name = this.shadowRoot.querySelector('.name')
-    this.$check = this.shadowRoot.querySelector('.check')
+    this.$message = this.shadowRoot.querySelector('.message');
+    this.$date = this.shadowRoot.querySelector('.date');
+    this.$name = this.shadowRoot.querySelector('.name');
+    this.$check = this.shadowRoot.querySelector('.check');
   }
 
   set name(value) {
-    this.$name.innerHTML = value
+    this.$name.innerHTML = value;
   }
 
   set message(value) {
-    this.$message.innerHTML = value
+    this.$message.innerHTML = value;
   }
 
   set date(value) {
-    this.$date.innerHTML = value
+    this.$date.innerHTML = value;
   }
 
   set check(value) {
-    this.$check.innerHTML = value
+    this.$check.innerHTML = value;
   }
 }
 
-customElements.define('dialog-container', Dialog)
+customElements.define('dialog-container', Dialog);

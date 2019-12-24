@@ -1,4 +1,4 @@
-const template = document.createElement('template')
+const template = document.createElement('template');
 template.innerHTML = `
     <style>
         input {
@@ -20,28 +20,28 @@ template.innerHTML = `
         
     </style>
     <input type="text" placeholder="Введите имя пользователя...">
-`
+`;
 
 class DialogInput extends HTMLElement {
   constructor() {
-    super()
-    this.shadowRoot = this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    super();
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.$input = this.shadowRoot.querySelector('input')
+    this.$input = this.shadowRoot.querySelector('input');
   }
 
   connectedCallback() {
-    this.$input.focus()
+    this.$input.focus();
   }
 
   get value() {
-    return this.$input.value
+    return this.$input.value;
   }
 
   set value(value) {
-    this.$input.value = value
+    this.$input.value = value;
   }
 }
 
-customElements.define('dialog-input', DialogInput)
+customElements.define('dialog-input', DialogInput);

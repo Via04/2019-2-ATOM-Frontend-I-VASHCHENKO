@@ -1,4 +1,4 @@
-const template = document.createElement('template')
+const template = document.createElement('template');
 template.innerHTML = `
     <style>
         form-input {
@@ -55,72 +55,72 @@ template.innerHTML = `
         <div class="result"></div>
         <form-input></form-input>
     </form>
-`
+`;
 
 class MessageForm extends HTMLElement {
   constructor() {
-    super()
-    this.shadowRoot = this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    super();
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.$form = this.shadowRoot.querySelector('form')
-    this.$input = this.shadowRoot.querySelector('form-input')
-    this.$result = this.shadowRoot.querySelector('.result')
-    this.$name = this.shadowRoot.querySelector('.name')
-    this.$exit = this.shadowRoot.querySelector('.exit')
+    this.$form = this.shadowRoot.querySelector('form');
+    this.$input = this.shadowRoot.querySelector('form-input');
+    this.$result = this.shadowRoot.querySelector('.result');
+    this.$name = this.shadowRoot.querySelector('.name');
+    this.$exit = this.shadowRoot.querySelector('.exit');
 
-    this.$form.addEventListener('submit', this.onSubmit.bind(this))
-    this.$form.addEventListener('keypress', this.onKeyPress.bind(this))
+    this.$form.addEventListener('submit', this.onSubmit.bind(this));
+    this.$form.addEventListener('keypress', this.onKeyPress.bind(this));
   }
 
   connectedCallback() {
     JSON.parse(localStorage.getItem(this.getAttribute('name'))).forEach((element) => {
-      const $message = document.createElement('message-container')
-      ;[$message.message, $message.date] = element
-      this.$result.appendChild($message)
-    })
-    this.$name.innerHTML = this.getAttribute('name')
-    this.$exit.addEventListener('click', this.exitToMain.bind(this))
+      const $message = document.createElement('message-container');
+      [$message.message, $message.date] = element;
+      this.$result.appendChild($message);
+    });
+    this.$name.innerHTML = this.getAttribute('name');
+    this.$exit.addEventListener('click', this.exitToMain.bind(this));
   }
 
   static get observedAttributes() {
-    return ['name']
+    return ['name'];
   }
 
   onSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     if (this.$input.value.length > 0) {
-      const date = new Date()
-      let minutes = date.getMinutes().toString()
+      const date = new Date();
+      let minutes = date.getMinutes().toString();
       if (minutes.length < 2) {
-        minutes = `0${minutes}`
+        minutes = `0${minutes}`;
       }
-      let hours = date.getHours().toString()
+      let hours = date.getHours().toString();
       if (hours.length < 2) {
-        hours = `0${hours}`
+        hours = `0${hours}`;
       }
-      const time = `${hours}:${minutes}`
-      const data = JSON.parse(localStorage.getItem(this.getAttribute('name')))
-      data.push([this.$input.value, time])
-      localStorage.setItem(this.getAttribute('name'), JSON.stringify(data))
-      const $message = document.createElement('message-container')
-      $message.message = this.$input.value
-      $message.date = time
-      this.$result.appendChild($message)
-      this.$input.value = ''
-      window.scrollTo(0, document.body.scrollHeight)
+      const time = `${hours}:${minutes}`;
+      const data = JSON.parse(localStorage.getItem(this.getAttribute('name')));
+      data.push([this.$input.value, time]);
+      localStorage.setItem(this.getAttribute('name'), JSON.stringify(data));
+      const $message = document.createElement('message-container');
+      $message.message = this.$input.value;
+      $message.date = time;
+      this.$result.appendChild($message);
+      this.$input.value = '';
+      window.scrollTo(0, document.body.scrollHeight);
     }
   }
 
   onKeyPress(event) {
     if (event.keyCode === 13) {
-      this.$form.dispatchEvent(new Event('submit'))
+      this.$form.dispatchEvent(new Event('submit'));
     }
   }
 
   set exit(value) {
-    this.exitToMain = value
+    this.exitToMain = value;
   }
 }
 
-customElements.define('message-form', MessageForm)
+customElements.define('message-form', MessageForm);

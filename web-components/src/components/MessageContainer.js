@@ -1,4 +1,4 @@
-const template = document.createElement('template')
+const template = document.createElement('template');
 template.innerHTML = `
     <style>
         .message {
@@ -28,25 +28,25 @@ template.innerHTML = `
         <p class="message"></p>
         <span class="date"></span>
     </div>
-`
+`;
 
 class MessageContainer extends HTMLElement {
   constructor() {
-    super()
-    this.shadowRoot = this.attachShadow({ mode: 'open' })
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
+    super();
+    this.shadowRoot = this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-    this.$message = this.shadowRoot.querySelector('.message')
-    this.$date = this.shadowRoot.querySelector('.date')
+    this.$message = this.shadowRoot.querySelector('.message');
+    this.$date = this.shadowRoot.querySelector('.date');
   }
 
   set message(value) {
-    this.$message.innerHTML = value
+    this.$message.innerHTML = value;
   }
 
   set date(value) {
-    this.$date.innerHTML = value
+    this.$date.innerHTML = value;
   }
 }
 
-customElements.define('message-container', MessageContainer)
+customElements.define('message-container', MessageContainer);
