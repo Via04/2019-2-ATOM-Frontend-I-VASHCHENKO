@@ -1,0 +1,130 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.chat_header {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  flex: 0;
+  background-color: #b846eb;
+  height: 6vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.backimg {
+  flex: 1;
+}
+
+.backimg img {
+  padding-left: 2vh;
+  width: 4.5vh;
+}
+
+.header_chat {
+  padding-left: 5vh;
+  text-align: center;
+  font-weight: 500;
+  font-size: 3.5vh;
+  font-family: Verdana, "DejaVu Sans", "Droid Sans", sans-serif;
+  flex: 3;
+}
+
+.saveBtn {
+  flex: 1;
+}
+
+.saveBtn img {
+  width: 5vh;
+}
+
+.userpage {
+  flex: 1;
+  width: 100%;
+  margin-top: 8vh;
+  padding: 0 4vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  background-color: #c0ebe2;
+}
+
+.avatar {
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarPic {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  background: ivory;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatarPic img {
+  width: 7vh;
+}
+
+.fullname {
+  flex: 1;
+  background-color: ivory;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 6vh;
+  border-radius: 1vh;
+  border-bottom: 0.5vh solid #636363;
+}
+
+.username {
+  flex: 1;
+  background-color: ivory;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 6vh;
+  border-radius: 1vh;
+  border-bottom: 0.5vh solid #636363;
+}
+
+.biography {
+  flex: 3;
+  background-color: ivory;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 1vh;
+  margin-bottom: 14vh;
+  border-bottom: 0.5vh solid #636363;
+}
+
+.textholdernames {
+  color: #6E6E6E;
+  margin: 0;
+  padding: 1vh;
+  font-family: Verdana, "DejaVu Sans", "Droid Sans", sans-serif;
+  font-size: 2.5vh;
+}
+
+.textholder {
+  background: ivory;
+  width: 96%;
+  padding: 1vh;
+  font-family: Verdana, "DejaVu Sans", "Droid Sans", sans-serif;
+  font-size: 2.5vh;
+  border: 0;
+  border-radius: 1vh;
+}

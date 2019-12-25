@@ -1,4 +1,6 @@
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
   "short_name": "Atom Mail 2019 a Opalev",
   "name": "Atom Mail 2019 a Opalev",
   "icons": [
@@ -12,4 +14,24 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
+=======
+=======
+>>>>>>> master
+	"short_name": "React Messenger",
+	"name": "React Messenger",
+	"icons": [
+		{
+			"src": "favicon.ico",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff"
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
 }
