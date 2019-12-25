@@ -1,11 +1,5 @@
 {
-	"extends": [
-		"airbnb",
-		"react-app",
-		"prettier",
-		"prettier/react",
-		"plugin:react/recommended"
-	],
+	"extends": ["airbnb", "react-app", "prettier", "prettier/react", "plugin:react/recommended"],
 	"root": true,
 	"plugins": ["import", "babel", "react", "prettier"],
 	"parser": "babel-eslint",
@@ -53,6 +47,7 @@
 		"semi": ["error", "always"],
 		"quotes": ["error", "single"],
 		"no-mixed-spaces-and-tabs": "error",
-		"jsx-a11y/no-autofocus": 0
+		"jsx-a11y/no-autofocus": 0,
+		"no-unused-vars": "off"
 	}
 }
