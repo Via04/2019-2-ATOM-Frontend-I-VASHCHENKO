@@ -15,8 +15,6 @@ template.innerHTML = `
     img {
       width: 6vh;
       height: 6vh;
-      display: block;
-      flex: 0;
       border-radius: 50%;
       background: #fff;
       margin-left: 2vh;
@@ -33,6 +31,7 @@ template.innerHTML = `
     }
 
     .name {
+      text-decoration: none;
       margin: 0;
       font-weight: bold;
       font-size: 3vh;
@@ -68,7 +67,7 @@ template.innerHTML = `
   <div class='wrapper'>
     <div class="avatar"><img src='http://s1.iconbird.com/ico/2013/3/636/w80h80139396728710.png'></div>
     <div class='name-message'>
-      <p class='name'></p>
+      <a class='name'></a>
       <p class='message'></p>
     </div>
     <div class='read'>

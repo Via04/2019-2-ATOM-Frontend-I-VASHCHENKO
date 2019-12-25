@@ -3,10 +3,10 @@ template.innerHTML = `
     <style>
         input {
           outline: none;
-          width: 80vw;
-          height: 7vh;
-          font-size: 5vw;
-          padding: 25px 50px;
+          width: 80%;
+          height: 5%;
+          font-size: 18pt;
+          padding: 10px 12px;
           position: fixed;
           bottom: 15vh;
           left: 4vw;

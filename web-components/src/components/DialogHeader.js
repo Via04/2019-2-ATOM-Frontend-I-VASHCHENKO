@@ -15,7 +15,6 @@ template.innerHTML = `
 
         .menu {
           outline: none;
-          flex-grow: 0;
           width: 5vh;
           height: 5vh;
           margin-left: 1vh;
@@ -25,8 +24,8 @@ template.innerHTML = `
 
         div.menu img {
           width: 65%;
-          padding-top: 1vh;
-          padding-left: 1vw;
+          padding-top: 20%;
+          padding-left: 20%;
         }
 
         .search {
