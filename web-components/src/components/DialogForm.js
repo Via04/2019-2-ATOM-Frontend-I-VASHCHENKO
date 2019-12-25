@@ -4,8 +4,9 @@ template.innerHTML = `
     .create_chat {
       background-color: rgb(148,0,211);
       position: fixed;
-      top: 90vh;
-      left: 90vw;
+      right: 10%;
+      bottom: 10%;
+      cursor: pointer;
     }
 
     .dialog_container {

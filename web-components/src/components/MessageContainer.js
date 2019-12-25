@@ -22,6 +22,33 @@ template.innerHTML = `
             padding: 15px;
             margin-bottom: 50px;
             max-width: 700px;
+            transition: opacity, background 1s ease;
+            animation-name: appear;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+        
+        @keyframes appear {
+            from {
+                transform: translate(1000px , 0);
+            }
+            to {
+                transform: translate(0px , 0);
+            }
+        }
+        
+        @-webkit-keyframes appear {
+            from {
+                -webkit-transform: translate(1000px , 0);
+            }
+            to {
+                -webkit-transform: translate(0px , 0);
+            }
+        }
+        
+        .wrapper:hover {
+            background: rgb(0, 182, 227);
         }
     </style>
     <div class="wrapper">
