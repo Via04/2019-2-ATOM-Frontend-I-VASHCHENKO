@@ -2,11 +2,7 @@
 // See: https://stylelint.io/user-guide/configuration/
 
 module.exports = {
-	extends: [
-		'@wemake-services/stylelint-config-scss',
-		'stylelint-config-css-modules',
-		'stylelint-a11y/recommended',
-	],
+	extends: ['@wemake-services/stylelint-config-scss', 'stylelint-config-css-modules', 'stylelint-a11y/recommended'],
 	plugins: ['stylelint-no-unsupported-browser-features', 'stylelint-a11y'],
 
 	rules: {
@@ -32,9 +28,6 @@ module.exports = {
 		'csstools/use-nesting': 'ignore',
 		indentation: 'tab',
 		'scss/media-feature-value-dollar-variable': 'never',
-		'scale-unlimited/declaration-strict-value': [
-			['/color/', 'fill', 'stroke'],
-			{ disableFix: true },
-		],
+		'scale-unlimited/declaration-strict-value': [['/color/', 'fill', 'stroke'], { disableFix: true }],
 	},
 };

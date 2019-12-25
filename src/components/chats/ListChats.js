@@ -50,10 +50,7 @@ const ListChats = () => {
 			const data = names.map((user) => (
 				<div className={styles.user_box} key={user.id}>
 					<div className={styles.avatar}>
-						<img
-							alt="User"
-							src="http://s1.iconbird.com/ico/2013/3/636/w80h80139396728710.png"
-						/>
+						<img alt="User" src="http://s1.iconbird.com/ico/2013/3/636/w80h80139396728710.png" />
 					</div>
 					<div className={styles.chatContainer}>
 						<Link className={styles.links} to={`/message/:${user.name}`}>
@@ -96,12 +93,7 @@ const ListChats = () => {
 			return (
 				<form className={styles.adduserinput}>
 					<div className={styles.add}>
-						<input
-							type="text"
-							value={iuser}
-							autoFocus
-							onChange={handleChange}
-						/>
+						<input type="text" value={iuser} autoFocus onChange={handleChange} />
 						<button type="button" onClick={handleClick}>
 							Add User
 						</button>
@@ -121,10 +113,7 @@ const ListChats = () => {
 			<form className={styles.adduser}>
 				<div className={styles.add}>
 					<button type="button" onClick={handleClick}>
-						<img
-							src="https://img.icons8.com/nolan/64/000000/add.png"
-							alt="add user"
-						/>
+						<img src="https://img.icons8.com/nolan/64/000000/add.png" alt="add user" />
 					</button>
 				</div>
 			</form>

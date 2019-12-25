@@ -14,10 +14,7 @@ const Navbar = (props) => {
 	const chatStatus = isChat ? (
 		<button type="button" onClick={null}>
 			<Link to="/chats">
-				<img
-					src="http://s1.iconbird.com/ico/2014/1/598/w128h1281390846445leftround128.png"
-					alt="back"
-				/>
+				<img src="http://s1.iconbird.com/ico/2014/1/598/w128h1281390846445leftround128.png" alt="back" />
 			</Link>
 		</button>
 	) : (

@@ -13,11 +13,7 @@ export default function configureStore(initialState = {}) {
 		// other compose enhancers if any
 		// Specify here other options if needed
 	});
-	const store = createStore(
-		rootReducer,
-		initialState,
-		composeEnhancers(...enhancers),
-	);
+	const store = createStore(rootReducer, initialState, composeEnhancers(...enhancers));
 	if (module.hot) {
 		// Enable Webpack hot module replacement for reducers
 		module.hot.accept('../reducers', () => {

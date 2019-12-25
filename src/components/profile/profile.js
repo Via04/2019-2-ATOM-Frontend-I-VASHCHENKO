@@ -23,13 +23,7 @@ export default function UserProfile() {
 		};
 		return (
 			<div className={styles.chat_header}>
-				<div
-					className={styles.backimg}
-					role="button"
-					onClick={() => {}}
-					onKeyPress={() => {}}
-					tabIndex="0"
-				>
+				<div className={styles.backimg} role="button" onClick={() => {}} onKeyPress={() => {}} tabIndex="0">
 					<Link to="/">
 						<img
 							src="http://s1.iconbird.com/ico/2014/1/598/w128h1281390846445leftround128.png"
@@ -38,17 +32,8 @@ export default function UserProfile() {
 					</Link>
 				</div>
 				<p className={styles.header_chat}>Edit Profile</p>
-				<div
-					role="button"
-					className={styles.saveBtn}
-					onClick={handleClick}
-					onKeyPress={() => {}}
-					tabIndex="0"
-				>
-					<img
-						src="http://s1.iconbird.com/ico/2013/3/637/w128h128139396832132.png"
-						alt="Save"
-					/>
+				<div role="button" className={styles.saveBtn} onClick={handleClick} onKeyPress={() => {}} tabIndex="0">
+					<img src="http://s1.iconbird.com/ico/2013/3/637/w128h128139396832132.png" alt="Save" />
 				</div>
 			</div>
 		);
@@ -89,10 +74,7 @@ export default function UserProfile() {
 			<div className={styles.userpage}>
 				<div className={styles.avatar}>
 					<div className={styles.avatarPic}>
-						<img
-							alt="User"
-							src="http://s1.iconbird.com/ico/2013/3/636/w80h80139396728710.png"
-						/>
+						<img alt="User" src="http://s1.iconbird.com/ico/2013/3/636/w80h80139396728710.png" />
 					</div>
 				</div>
 				<div className={styles.fullname}>

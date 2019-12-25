@@ -274,11 +274,7 @@ export default function Message({ name }) {
 					</button>
 				</li>
 				<li>
-					<button
-						type="button"
-						className={styles.menu_button}
-						onClick={() => fileRef.current.click()}
-					>
+					<button type="button" className={styles.menu_button} onClick={() => fileRef.current.click()}>
 						image
 					</button>
 				</li>
@@ -299,23 +295,13 @@ export default function Message({ name }) {
 				/>
 				<div className={styles.att}>
 					<button type="button" className={styles.attach} onClick={handleClick}>
-						<img
-							src="https://img.icons8.com/color/96/000000/add.png"
-							alt="add"
-						/>
+						<img src="https://img.icons8.com/color/96/000000/add.png" alt="add" />
 					</button>
 					{menu}
 				</div>
 				<div className={styles.audio}>
-					<button
-						type="button"
-						className={styles.attach}
-						onClick={(event) => handleMedia(event)}
-					>
-						<img
-							src="https://img.icons8.com/wired/64/000000/microphone.png"
-							alt="rec"
-						/>
+					<button type="button" className={styles.attach} onClick={(event) => handleMedia(event)}>
+						<img src="https://img.icons8.com/wired/64/000000/microphone.png" alt="rec" />
 					</button>
 				</div>
 			</div>

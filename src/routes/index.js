@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-	BrowserRouter as Router,
-	Route,
-	Switch,
-	useParams,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import ListChats from '../components/chats/ListChats';
 import ListMessages from '../components/messages/ListMessages';
