@@ -11,10 +11,7 @@ const SignedIn = () => {
 				</li>
 				<li>
 					<NavLink to="/profile">
-						<img
-							src="https://img.icons8.com/pastel-glyph/64/000000/person-male.png"
-							alt="NN"
-						/>
+						<img src="https://img.icons8.com/pastel-glyph/64/000000/person-male.png" alt="NN" />
 					</NavLink>
 				</li>
 			</ul>
