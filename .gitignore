@@ -130,11 +130,20 @@ bower_components/
 *.log
 
 dist/
+<<<<<<< HEAD
 
 #### eslint ####
 # These rules are required to lint .eslintrc.json and friends.
 # It is not related to git in any manner.
 !web-components/.eslintrc.json
+=======
+build/
+
+#### eslint ####
+# These rules are required to lint .eslintrc.js and friends.
+# It is not related to git in any manner.
+!.eslintrc.js
+>>>>>>> master
 !stylelint.config.js
 !.remarkrc.js
 
@@ -145,3 +154,8 @@ flow-typed/
 docs/_book/
 jest_*/
 .jscpd/
+<<<<<<< HEAD
+=======
+.idea
+.vscode
+>>>>>>> master

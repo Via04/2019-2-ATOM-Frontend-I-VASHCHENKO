@@ -1,5 +1,12 @@
 export default {
+<<<<<<< HEAD
   // Counter
   INCREMENT_COUNTER: 'INCREMENT_COUNTER',
   DECREMENT_COUNTER: 'DECREMENT_COUNTER',
 }
+=======
+	// Counter
+	INCREMENT_COUNTER: 'INCREMENT_COUNTER',
+	DECREMENT_COUNTER: 'DECREMENT_COUNTER',
+};
+>>>>>>> master
