@@ -13,6 +13,8 @@ module.exports = {
 				ignoreProperties: ['/^var-/'],
 			},
 		],
+		'plugin/stylelint-no-indistinguishable-colors': false,
+		'plugin/selector-tag-no-without-class': null,
 
 		// custom plugins to work with
 		'plugin/no-unsupported-browser-features': [

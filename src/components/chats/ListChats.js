@@ -111,7 +111,7 @@ const ListChats = () => {
 		};
 		return (
 			<form className={styles.adduser}>
-				<div className={styles.add}>
+				<div>
 					<button type="button" onClick={handleClick}>
 						<img src="https://img.icons8.com/nolan/64/000000/add.png" alt="add user" />
 					</button>
