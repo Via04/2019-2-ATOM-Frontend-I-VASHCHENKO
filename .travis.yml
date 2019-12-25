@@ -14,5 +14,4 @@ deploy:
     local_dir: /build
     on:
         branch:
-            - master
             - hm_05
