@@ -6,7 +6,7 @@ import styles from '../../styles/menu.module.css'
 
 
 const Menu = (props) => {
-	const [login, setLogin] = useState('Some UID');
+	const login = "Some UID'
 	const loginStatus = login ? <SignedIn/> : <SignedOut/>;
 	const { visible } = props;
 	if(visible) {
