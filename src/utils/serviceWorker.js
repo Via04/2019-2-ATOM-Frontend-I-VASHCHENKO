@@ -10,6 +10,7 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read http://bit.ly/CRA-PWA
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
@@ -127,6 +128,8 @@ export function unregister() {
     })
   }
 =======
+=======
+>>>>>>> master
 /* eslint no-console: 0 */
 /* eslint no-param-reassign: 0 */
 
@@ -252,5 +255,8 @@ export function unregister() {
 			registration.unregister();
 		});
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

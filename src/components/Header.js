@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import logo from '../assets/logo.svg'
 import styled from '@emotion/styled'
@@ -38,6 +39,8 @@ function Header() {
 
 export default Header
 =======
+=======
+>>>>>>> master
 import React from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
@@ -76,4 +79,7 @@ function Header() {
 }
 
 export default Header;
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

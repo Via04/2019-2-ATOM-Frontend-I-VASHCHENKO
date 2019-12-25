@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ActionTypes from '../constants/ActionTypes'
 
 const initialState = 0
@@ -13,6 +14,8 @@ export default function counter(state = initialState, action) {
       return state
   }
 =======
+=======
+>>>>>>> master
 import ActionTypes from '../constants/ActionTypes';
 
 const initialState = 0;
@@ -26,5 +29,8 @@ export default function counter(state = initialState, action) {
 		default:
 			return state;
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
@@ -18,6 +19,8 @@ render(
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister()
 =======
+=======
+>>>>>>> master
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -36,4 +39,7 @@ render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister();
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import PropTypes from 'prop-types'
 import Counter from '../components/Counter'
@@ -44,6 +45,8 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps)(CounterContainer)
 =======
+=======
+>>>>>>> master
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -93,4 +96,7 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(CounterContainer);
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

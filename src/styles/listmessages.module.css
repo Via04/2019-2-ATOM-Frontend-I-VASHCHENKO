@@ -1,0 +1,90 @@
+.chat_header {
+  background-color: #b846eb;
+  height: 6vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.backimg {
+  display: inline-block;
+  width: 4vw;
+}
+
+.backimg img {
+  padding-left: 2vh;
+  width: 4.5vh;
+}
+
+.header_chat {
+  text-align: center;
+  padding-left: 5vh;
+  font-weight: 500;
+  font-size: 2em;
+  height: 10vh;
+  font-family: Verdana, "DejaVu Sans", "Droid Sans", sans-serif;
+  flex: 3;
+  color: ivory;
+  line-height: 10vh;
+}
+
+.result {
+  background-color: #D5EBDA;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 2vh;
+  padding-top: 2vh;
+  overflow: hidden;
+  margin-top: 6vh;
+  padding-bottom: 7vh;
+}
+
+.imgclick {
+  width: 6vh;
+}
+
+.chat_box {
+  background-color: #ADD8E6;
+  border-radius: 1.5vh;
+  width: auto;
+  padding: 1vh;
+  margin-bottom: 1vh;
+  max-width: 25vh;
+  transition: background-color 1s;
+}
+
+.chat_box:hover:focus {
+  background-color: #00B5E4;
+}
+
+.msg {
+  display: inline-block;
+  font-size: 1.5vh;
+  font-style: italic;
+}
+
+.chat_text {
+  font-size: 3vh;
+  font-family: Verdana, "DejaVu Sans", "Droid Sans", sans-serif;
+  margin: 0.5vh;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  line-height: 4vh;
+}
+
+input {
+  border: 0;
+  border-top: 5px solid ivory;
+  outline: none;
+  width: 100%;
+  height: 0.5vh;
+  font-size: 3vh;
+  padding: 3vh 2vh;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

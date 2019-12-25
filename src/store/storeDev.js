@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createStore, applyMiddleware } from 'redux'
 import ReduxThunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
@@ -26,6 +27,8 @@ export default function configureStore(initialState = {}) {
 
   return store
 =======
+=======
+>>>>>>> master
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -56,5 +59,8 @@ export default function configureStore(initialState = {}) {
 	}
 
 	return store;
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 }

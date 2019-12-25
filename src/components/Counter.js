@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
@@ -31,6 +32,8 @@ Counter.propTypes = {
 
 export default Counter
 =======
+=======
+>>>>>>> master
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
@@ -70,4 +73,7 @@ Counter.propTypes = {
 };
 
 export default Counter;
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

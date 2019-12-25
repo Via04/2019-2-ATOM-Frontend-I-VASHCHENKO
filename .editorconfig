@@ -7,7 +7,11 @@ charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 <<<<<<< HEAD
+<<<<<<< HEAD
 indent_style = space
+=======
+indent_style = tab
+>>>>>>> master
 =======
 indent_style = tab
 >>>>>>> master

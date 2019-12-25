@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import CounterContainer from '../containers/CounterContainer'
 import Header from '../components/Header'
@@ -26,6 +27,8 @@ function Routes() {
 
 export default Routes
 =======
+=======
+>>>>>>> master
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
@@ -71,4 +74,7 @@ function Routes() {
 }
 
 export default Routes;
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

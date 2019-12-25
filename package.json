@@ -1,6 +1,10 @@
 {
 	"name": "react-messenger",
+<<<<<<< HEAD
 	"homepage": "https://via04.github.io/2019-2-ATOM-Frontend-I-VASHCHENKO",
+=======
+	"homepage": "https://your_gh_login.github.io/your_repo_name",
+>>>>>>> master
 	"description": "Mail.Ru Group Frontend Atom course, 2019",
 	"version": "0.1.0",
 	"author": "Ivan",

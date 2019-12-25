@@ -3,6 +3,7 @@
 
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   'extends': [
     '@wemake-services/stylelint-config-scss',
     'stylelint-config-css-modules',
@@ -34,6 +35,8 @@ module.exports = {
   },
 }
 =======
+=======
+>>>>>>> master
 	extends: [
 		'@wemake-services/stylelint-config-scss',
 		'stylelint-config-css-modules',
@@ -67,4 +70,7 @@ module.exports = {
 		],
 	},
 };
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
