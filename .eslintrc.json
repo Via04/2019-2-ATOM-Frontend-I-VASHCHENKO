@@ -47,6 +47,7 @@
 		"semi": ["error", "always"],
 		"quotes": ["error", "single"],
 		"no-mixed-spaces-and-tabs": "error",
-		"jsx-a11y/no-autofocus": 0
+		"jsx-a11y/no-autofocus": 0,
+		"no-unused-vars": "off"
 	}
 }
