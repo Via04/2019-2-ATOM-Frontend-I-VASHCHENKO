@@ -6,21 +6,23 @@ ul.menu {
 
 ul.menu li {
 	list-style-type: none;
-	border: 2px solid rgb(255, 255, 255);
+	border: 2px solid rgb(0, 0, 0);
 	background: rgb(255, 255, 240);
 }
 
 ul.menu li a {
 	text-decoration: none;
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	font-size: 1.5em;
 	font-family: Verdana, 'DejaVu Sans', 'Droid Sans', sans-serif;
 	padding: 0.2em 0.1em;
 }
 
 ul.menu li a.chosen,
-ul.menu li a:hover:focus {
+ul.menu li a:focus:hover,
+ul.menu li {
 	text-decoration: none;
+	color: rgb(0, 0, 0);
 	font-size: 1.5em;
 	font-family: Verdana, 'DejaVu Sans', 'Droid Sans', sans-serif;
 	padding: 0.2em 0.1em;

@@ -5,7 +5,7 @@
 	border-bottom: 0.5vh solid rgb(111, 200, 235);
 	font-size: 3vh;
 	text-decoration: none;
-	font-family: Verdana, DejaVu Sans, 'Droid Sans', sans-serif;
+	font-family: Verdana, 'DejaVu Sans', 'Droid Sans', sans-serif;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -111,12 +111,12 @@ form.adduser {
 	border-radius: 50%;
 }
 
-form.adduser div {
+form.adduser div.add {
 	margin: 0;
 	padding: 0;
 }
 
-form.adduser div button {
+form.adduser div.add button {
 	border: none;
 	border-radius: 50%;
 	margin: 0;
@@ -127,7 +127,7 @@ form.adduser div button {
 }
 
 form.adduserinput,
-form.adduserinput div {
+form.adduserinput div.add {
 	border-radius: 5vh;
 	position: fixed;
 	height: 4vh;
@@ -136,7 +136,7 @@ form.adduserinput div {
 	left: 2.5vh;
 }
 
-form.adduserinput div input {
+form.adduserinput div.add input {
 	margin: 0 3vw;
 	width: 70%;
 	display: inline-block;
@@ -145,7 +145,7 @@ form.adduserinput div input {
 	height: 4vh;
 }
 
-form.adduserinput div button {
+form.adduserinput div.add button {
 	margin: 0 3vw;
 	width: 15%;
 	display: inline-block;
