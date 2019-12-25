@@ -6,6 +6,13 @@ html {
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+=======
+=======
+>>>>>>> master
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -16,17 +23,31 @@ body {
     'Fira Sans',
     'Droid Sans',
     'Helvetica Neue',
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+=======
+=======
+>>>>>>> master
   font-family:
     source-code-pro,
     Menlo,
     Monaco,
     Consolas,
     'Courier New',
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
     monospace;
 }
