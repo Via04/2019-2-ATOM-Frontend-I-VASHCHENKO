@@ -16,9 +16,7 @@ export const history = createBrowserHistory();
 
 const Selected = () => {
 	const { id } = useParams();
-	return (
-		<ListMessages name = {id.slice(1,id.length)}/>
-	);
+	return <ListMessages name={id.slice(1, id.length)} />;
 };
 
 function Routes() {
@@ -26,16 +24,16 @@ function Routes() {
 		<Router history={history}>
 			<Switch>
 				<Route exact path="/">
-					<ListChats/>
+					<ListChats />
 				</Route>
 				<Route path="/chats">
-					<ListChats/>
+					<ListChats />
 				</Route>
 				<Route path="/message/:id">
-					<Selected/>
+					<Selected />
 				</Route>
 				<Route path="/profile">
-					<UserProfile/>
+					<UserProfile />
 				</Route>
 			</Switch>
 		</Router>

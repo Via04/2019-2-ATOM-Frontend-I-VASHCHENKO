@@ -1,35 +1,35 @@
 ul.menu {
-  padding: 3vh 4vw;
-  margin: 0;
-  list-style-type: none;
+	padding: 3vh 4vw;
+	margin: 0;
+	list-style-type: none;
 }
 
 ul.menu li {
-  list-style-type: none;
-  border: 2px solid black;
-  background: ivory;
-}
-
-ul.menu li a.chosen, ul.menu li a:hover {
-  text-decoration: none;
-  color: black;
-  font-size: 1.5em;
-  font-family: Verdana, "DejaVu Sans", "Droid Sans", sans-serif;
-  padding: 0.2em 0.1em;
-  border: 2px solid #15ebe5;
+	list-style-type: none;
+	border: 2px solid rgb(255, 255, 255);
+	background: rgb(255, 255, 240);
 }
 
 ul.menu li a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.5em;
-  font-family: Verdana, "DejaVu Sans", "Droid Sans", sans-serif;
-  padding: 0.2em 0.1em;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	font-family: Verdana, 'DejaVu Sans', 'Droid Sans', sans-serif;
+	padding: 0.2em 0.1em;
+}
+
+ul.menu li a.chosen,
+ul.menu li a:hover:focus {
+	text-decoration: none;
+	font-size: 1.5em;
+	font-family: Verdana, 'DejaVu Sans', 'Droid Sans', sans-serif;
+	padding: 0.2em 0.1em;
+	border: 2px solid rgb(21, 235, 229);
 }
 
 ul.menu li img {
-  vertical-align: middle;
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
+	vertical-align: middle;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
 }

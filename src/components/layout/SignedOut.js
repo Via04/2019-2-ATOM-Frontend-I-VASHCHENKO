@@ -6,11 +6,15 @@ const SignedOut = () => {
 	return (
 		<div>
 			<ul className={signedinstyles.menu}>
-				<li><NavLink to='/'>Signup</NavLink></li>
-				<li><NavLink to='/'>Login</NavLink></li>
+				<li>
+					<NavLink to="/">Signup</NavLink>
+				</li>
+				<li>
+					<NavLink to="/">Login</NavLink>
+				</li>
 			</ul>
 		</div>
 	);
-}
+};
 
 export default SignedOut;
