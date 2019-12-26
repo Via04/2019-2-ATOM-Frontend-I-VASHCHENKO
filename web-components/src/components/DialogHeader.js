@@ -65,7 +65,7 @@ class DialogHeader extends HTMLElement {
     this.$search = this.shadowRoot.querySelector('.search');
     this.$form = this.shadowRoot.querySelector('form');
 
-    //this.$search.addEventListener('click', this.onclick.bind(this));
+    // this.$search.addEventListener('click', this.onclick.bind(this));
   }
 
   connectedCallback() {
