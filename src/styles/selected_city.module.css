@@ -1,5 +1,5 @@
 .page {
-    background-color: rgb(107, 168, 192);
+    background-color: rgb(240, 240, 240);
 }
 
 .Header {
@@ -16,8 +16,8 @@
     margin-left: 2vh;
 }
 
-.backImg img {
-    width: 4vh;
+.back_img {
+    width: 64px;
 }
 
 .cityName {

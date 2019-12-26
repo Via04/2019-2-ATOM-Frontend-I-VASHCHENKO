@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
-import styles from '../styles/selected_city.css';
+import styles from '../styles/selected_city.module.css';
 
 export default function SelectedCity({name}) {
     console.log(typeof(name));
@@ -22,7 +22,7 @@ export default function SelectedCity({name}) {
             <div className={styles.Header}>
                 <Link className={styles.links} to = {`/`}>
                     <div className={styles.backImg}>
-                        <img alt='back' src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/back-512.png' />
+                        <img className={styles.back_img} alt='back' src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/back-512.png' />
                     </div>
                 </Link>
                 <div className={styles.cityName}>
