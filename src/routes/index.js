@@ -27,8 +27,3 @@ export default function Routes() {
 				</Route>
 				<Route path="/:id/">
 					<Child/>
-				</Route>
-			</Switch>
-		</Router>
-	);
-}
