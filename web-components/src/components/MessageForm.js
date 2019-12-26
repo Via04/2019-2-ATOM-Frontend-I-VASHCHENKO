@@ -34,6 +34,10 @@ template.innerHTML = `
             justify-content: space-around;
             align-items: center;
         }
+        
+        .header img {
+            cursor: pointer;
+        }
 
         .name {
           text-align: center;
