@@ -1,11 +1,12 @@
 language: node_js
 node_js:
-  - "stable"
+  - 'stable'
 
 before_install:
   - cd web-components
 
 script:
+  - npm run test
   - npm run build
 
 deploy:
@@ -16,4 +17,4 @@ deploy:
   on:
     branch:
       - master
-      - hm_02
+      - hm_03
