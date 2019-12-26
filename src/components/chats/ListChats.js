@@ -92,7 +92,7 @@ const ListChats = () => {
 		if (visible) {
 			return (
 				<form className={styles.adduserinput}>
-					<div>
+					<div className={styles.add}>
 						<input type="text" value={iuser} autoFocus onChange={handleChange} />
 						<button type="button" onClick={handleClick}>
 							Add User
@@ -128,7 +128,7 @@ const ListChats = () => {
 
 	return (
 		<div>
-			<Navbar />
+			<Navbar name="REACT-MESSENGER" isChat={false} />
 			<UserList names={chats} />
 			<AddUserButton />
 			<AddUserInput />

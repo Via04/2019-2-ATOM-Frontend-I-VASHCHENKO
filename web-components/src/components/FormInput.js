@@ -22,29 +22,29 @@ template.innerHTML = `
 `;
 
 class FormInput extends HTMLElement {
-    constructor() {
-        super();
-        this.shadowRoot = this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
+	constructor() {
+		super();
+		this.shadowRoot = this.attachShadow({ mode: 'open' });
+		this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-        this.$input = this.shadowRoot.querySelector('input');
-    }
+		this.$input = this.shadowRoot.querySelector('input');
+	}
 
-    static get observedAttributes() {
-        return ['name', 'value', 'placeholder', 'disabled'];
-    }
+	static get observedAttributes() {
+		return ['name', 'value', 'placeholder', 'disabled'];
+	}
 
-    attributeChangedCallback(name, oldValue, newValue) {
-        this.$input.setAttribute(name, newValue);
-    }
+	attributeChangedCallback(name, oldValue, newValue) {
+		this.$input.setAttribute(name, newValue);
+	}
 
-    get value() {
-        return this.$input.value;
-    }
+	get value() {
+		return this.$input.value;
+	}
 
-    set value(newValue) {
-        this.$input.value = newValue;
-    }
+	set value(newValue) {
+		this.$input.value = newValue;
+	}
 }
 
 customElements.define('form-input', FormInput);

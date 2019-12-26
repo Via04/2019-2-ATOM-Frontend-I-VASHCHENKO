@@ -15,4 +15,4 @@ deploy:
     local_dir: build
     on:
         branch:
-            - hm_05
+            - hm_07
